@@ -5,11 +5,12 @@ import './App.css'
 const API_KEY = 'AIzaSyDsRxXMEnSy58OxNucLB0wx6wEC7fvyMh0'
 const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent'
 
-const [userMessage, setUserMessage] = useState('');
-const [messages, setMessages] = useState([]);    
-const [loading, setLoading] = useState(false);
+
 
 function App() {
+    const [userMessage, setUserMessage] = useState('');
+    const [messages, setMessages] = useState([]);    
+    const [loading, setLoading] = useState(false);
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -31,7 +32,7 @@ function App() {
 
                                     Pregunta: ${userMessage}
 
-                                    Respuesta (máximo 30 palabras):`
+                                    Respuesta (máximo 50 palabras):`
                                 },
                             ],
                         },
